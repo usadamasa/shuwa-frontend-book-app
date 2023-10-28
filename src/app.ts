@@ -21,11 +21,11 @@ export type Review = {
 
 $(function () {
   $.ajax('http://localhost:1323/books')
-    .done(function (books) {
-      books.forEach(createBookListItem)
+    .done(function (books: Book[]) {
+      books.forEach(book => $('#js-book-list').append($(createBookListItem(book))))
 
       $('.js-toggle-review').on('click', function (event) {
-        var bookId = $(this).data('bookId')
+        const bookId = $(this).data('bookId');
         $('.js-review[data-book-id="' + bookId + '"]').toggle('fast')
 
         return false
@@ -39,7 +39,7 @@ $(function () {
       })
 
       $(document).on('submit', '.js-form', function (event) {
-        var bookId = $(this).data('bookId')
+        const bookId = $(this).data('bookId');
         $.ajax({
           url: 'http://localhost:1323/reviews',
           type: 'post',
