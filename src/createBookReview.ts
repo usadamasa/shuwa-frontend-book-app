@@ -1,6 +1,6 @@
 import {Review} from "./app";
 
-export function createBookReview(review: Review) {
+export default function createBookReview(review: Review) {
   return (
     '<li class="review__list__item">' +
     '<p class="review__list__item__name">' + review.username + 'さんの感想・評価</p>' +
