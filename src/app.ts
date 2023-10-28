@@ -1,7 +1,7 @@
 import $ from 'jquery'
 
 import createBookReview from './createBookReview';
-import appendBook from "./appendBook";
+import createBookListItem from "./createBookListItem";
 
 export type Book = {
   id: number,
@@ -22,7 +22,7 @@ export type Review = {
 $(function () {
   $.ajax('http://localhost:1323/books')
     .done(function (books) {
-      books.forEach(appendBook)
+      books.forEach(createBookListItem)
 
       $('.js-toggle-review').on('click', function (event) {
         var bookId = $(this).data('bookId')

@@ -3,7 +3,7 @@ import $ from "jquery";
 import createBookReview from "./createBookReview";
 import {Book} from "@/app";
 
-export default function appendBook(book: Book) {
+export default function createBookListItem(book: Book) {
   $('#js-book-list').append($(
     '<li class="book-list__item">' +
     '<div class="book-list__item__inner">' +
