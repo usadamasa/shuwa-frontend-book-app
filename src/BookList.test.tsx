@@ -1,9 +1,6 @@
 jest.mock('./createBookReview')
 
-import $ from 'jquery'
-
 import {Book} from "@/app";
-import createBookListItem from './createBookListItem'
 import createBookReview from "./createBookReview";
 
 describe('createBookLitItem', () => {
@@ -30,12 +27,12 @@ describe('createBookLitItem', () => {
   }
 
   test('should return DOM element', () => {
-    document.body.innerHTML = `<ul>${createBookListItem(book)}</ul>`
+    document.body.innerHTML = `<ul>BookList(book)}</ul>`
     expect($('.book-list__item').length).toBe(1)
   })
 
   test('should render review', () => {
-    document.body.innerHTML = `<ul>${createBookListItem(book)}</ul>`
+    document.body.innerHTML = `<ul>BookList(book)}</ul>`
     expect(createBookReview).toHaveBeenCalledTimes(book.reviews.length)
   })
 })
