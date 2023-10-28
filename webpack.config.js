@@ -11,18 +11,20 @@ module.exports = {
     extensions: [
       '.js',
       '.ts',
+      '.tsx',
     ]
   },
   module: {
     rules: [
       {
         exclude: /node_modules/,
-        test: /\.(j|t)s$/,
+        test: /\.(j|t)sx$/,
         use: {
           loader: 'babel-loader',
           options: {
             presets: [
               '@babel/preset-env',
+              '@babel/preset-react',
               '@babel/preset-typescript',
             ],
           },

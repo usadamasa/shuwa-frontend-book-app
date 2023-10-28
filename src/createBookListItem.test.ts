@@ -1,6 +1,6 @@
-import $ from 'jquery'
-
 jest.mock('./createBookReview')
+
+import $ from 'jquery'
 
 import {Book} from "@/app";
 import createBookListItem from './createBookListItem'
