@@ -1,6 +1,8 @@
 import $ from 'jquery'
 
-type Book = {
+import {createBookReview} from './createBookReview';
+
+export type Book = {
   id: number,
   title: string,
   author: string,
@@ -9,7 +11,7 @@ type Book = {
   reviews: Review[],
 }
 
-type Review = {
+export type Review = {
   id: number,
   username: string,
   comment: string,
@@ -82,16 +84,3 @@ function appendBook(book: Book) {
   ))
 }
 
-function createBookReview(review: Review) {
-  return (
-    '<li class="review__list__item">' +
-    '<p class="review__list__item__name">' + review.username + 'さんの感想・評価</p>' +
-    '<p class="review__list__item__comment">' + review.comment + '</p>' +
-    '<p class="review__list__item__like">' +
-    '<a href="#" class="review__list__item__like__button js-like">' +
-    '&#x2764;️ <span class="js-like-count">' + review.like + '</span>件' +
-    '</a>' +
-    '</p>' +
-    '</li>'
-  )
-}
