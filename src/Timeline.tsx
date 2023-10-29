@@ -26,7 +26,7 @@ export default function Timeline() {
 
   return (
     <Page>
-      <h2 className="page__title">タイムライン</h2>
+      <Title>タイムライン</Title>
       <BookList books={books}/>
     </Page>
   )
