@@ -3,15 +3,6 @@ body {
     background-color: #eee;
 }
 
-.page {
-    margin: 0 auto;
-    width: 700px;
-}
-
-.page__title {
-    font-size: 1.8rem;
-}
-
 /* 書籍リスト */
 .book-list {
     padding: 0;
@@ -96,42 +87,6 @@ body {
 .review-exit-active {
     max-height: 0;
     transition: max-height 0.2s ease;
-}
-
-.review__list {
-    border-top: 1px solid #d6d6d6;
-    list-style: none;
-    margin-top: 20px;
-    padding: 0;
-}
-
-.review__list__item {
-    border-bottom: 1px solid #d6d6d6;
-    font-size: 1rem;
-    padding: 15px 0;
-}
-
-.review__list__item__name {
-    margin: 0;
-}
-
-.review__list__item__comment {
-    margin: 5px 0 0;
-}
-
-.review__list__item__like {
-    margin: 10px 0 0;
-    text-align: right;
-}
-
-.review__list__item__like__button {
-    color: #000;
-    display: inline-block;
-    text-decoration: none;
-}
-
-.review__list__item__like__button:hover {
-    color: #F43C3C;
 }
 
 /* レビュー投稿 */

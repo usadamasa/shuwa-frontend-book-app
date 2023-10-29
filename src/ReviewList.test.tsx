@@ -1,5 +1,5 @@
 import React from "react";
-import {shallow} from "enzyme";
+import {shallow} from 'enzyme';
 
 import ReviewList from "./ReviewList";
 import {Review} from "@/app";
@@ -12,7 +12,7 @@ describe('<ReviewList>', () => {
     like: 3
   }
 
-  test('should retrun <ul> elem', () => {
+  test('should return <ul> elem', () => {
     const wrapper = shallow(<ReviewList reviews={[review]}/>);
     expect(wrapper.is('.review__list')).toBe(true);
   });
